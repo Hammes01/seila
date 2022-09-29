@@ -1,0 +1,71 @@
+print("Legenda:")
+print("-  = 1")
+print("-- = 2")
+print("|  = -1")
+print("|| = -2")
+print("# = 0")
+
+print("\n================================")
+print()
+print()
+
+
+print("SJF:")
+print("P1: 1, 1, -1")
+print("P2: 2, -1, 2")
+print()
+print("[-- |        ]")
+print("[    -- | -- ]")
+
+print("\n================================")
+print()
+print()
+
+print("Processo 1: ")
+print(1, 2, -1, 1, -2, 1)
+print()
+
+my_list_str = [1, 2, -1, 1, -2, 1]
+for index, value in enumerate(my_list_str):
+    if value == -1:
+        my_list_str[index] = "|"
+    if value == 1:
+        my_list_str[index] = '-'
+    if value == 2:
+        my_list_str[index] = '--'
+    if value == -2:
+        my_list_str[index] = '||'
+print("FIFO:")
+print(my_list_str)
+print("\n================================")
+print()
+print()
+
+print("Processo 1: ")
+print(1, 2, -1, 1, -2, 1)
+print("Processo 2: ")
+print(0,0,2,-1)
+print()
+
+my_list_str = [1, 2, -1, 1]
+for index, value in enumerate(my_list_str):
+    if value == -1:
+        my_list_str[index] = "|"
+    if value == 1:
+        my_list_str[index] = '-'
+    if value == 2:
+        my_list_str[index] = '--'
+    if value == -2:
+        my_list_str[index] = '||'
+print("Prioridade:")      
+print(my_list_str)     
+my_list_str = [0,0,2,-1]
+for index, value in enumerate(my_list_str):
+    if value == -1:
+        my_list_str[index] = "|"
+    if value == 2:
+        my_list_str[index] = '--'
+    if value == 0:
+        my_list_str[index] = '#'
+     
+print(my_list_str)
